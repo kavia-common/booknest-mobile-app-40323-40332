@@ -1,0 +1,1 @@
+ /home/kavia/workspace/code-generation/booknest-mobile-app-40323-40332/booknest_mobile_frontend/.dart_tool/flutter_build/5835bb7b0deb846795c11e21108c4d05/native_assets.json: 
