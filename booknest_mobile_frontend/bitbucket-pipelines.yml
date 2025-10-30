@@ -1,0 +1,11 @@
+image: ghcr.io/cirruslabs/flutter:stable
+
+pipelines:
+  default:
+    - step:
+        name: Analyze Flutter App
+        script:
+          - cd booknest-mobile-app-40323-40332/booknest_mobile_frontend
+          - flutter --version
+          - flutter pub get
+          - flutter analyze

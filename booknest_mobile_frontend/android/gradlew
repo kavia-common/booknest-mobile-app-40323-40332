@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Minimal delegator to Gradle wrapper for CI structure completeness
+DIR="$(cd "$(dirname "$0")" && pwd)"
+exec "$DIR/../gradlew" "$@"

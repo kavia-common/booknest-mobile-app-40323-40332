@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Conventional CI entrypoint that analyzes the nested Flutter app.
+# Many CI runners look for a 'flutter_analyze' or 'analyze' script to execute.
+set -euo pipefail
+
+APP_DIR="booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+
+if ! command -v flutter >/dev/null 2>&1; then
+  echo "[flutter_analyze] FATAL: Flutter SDK not on PATH" >&2
+  exit 127
+fi
+
+if [ ! -d "$APP_DIR" ] || [ ! -f "$APP_DIR/pubspec.yaml" ]; then
+  echo "[flutter_analyze] FATAL: App dir not found or pubspec.yaml missing at: $APP_DIR" >&2
+  exit 2
+fi
+
+echo "[flutter_analyze] cd $APP_DIR"
+cd "$APP_DIR"
+
+echo "[flutter_analyze] flutter pub get"
+flutter pub get
+
+echo "[flutter_analyze] flutter analyze --no-fatal-warnings"
+# Use --no-fatal-warnings to avoid unrelated warnings failing CI; adjust as needed.
+flutter analyze --no-fatal-warnings

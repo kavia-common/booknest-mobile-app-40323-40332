@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/opt/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/opt/android-sdk-linux/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/kavia/workspace/code-generation/booknest-mobile-app-40323-40332/booknest_mobile_frontend/android/app/.cxx/RelWithDebInfo/4k2w191j/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/opt/android-sdk-linux/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/kavia/workspace/code-generation/booknest-mobile-app-40323-40332/booknest_mobile_frontend/android/app/.cxx/RelWithDebInfo/4k2w191j/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

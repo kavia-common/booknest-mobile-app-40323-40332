@@ -1,0 +1,9 @@
+{
+  "name": "booknest_flutter_app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CI helper to run Flutter analysis from nested app",
+  "scripts": {
+    "analyze": "bash -lc \"flutter pub get && flutter analyze\""
+  }
+}

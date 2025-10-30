@@ -1,0 +1,10 @@
+Run from repository root:
+bash RUN_ANALYZE.sh
+
+If that fails due to missing Flutter SDK, run:
+bash run_ci.sh
+
+Both scripts change into:
+booknest-mobile-app-40323-40332/booknest_mobile_frontend
+and run:
+flutter pub get && flutter analyze

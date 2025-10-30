@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# flutterw: Wrapper to run Flutter commands for the nested app using absolute paths.
+# Usage examples (from repo root):
+#   ./flutterw analyze
+#   ./flutterw pub get
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+APP_DIR="$REPO_ROOT/booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+
+if ! command -v flutter >/dev/null 2>&1; then
+  echo "[flutterw] FATAL: Flutter SDK not on PATH" >&2
+  exit 127
+fi
+
+if [ ! -f "$APP_DIR/pubspec.yaml" ]; then
+  echo "[flutterw] FATAL: pubspec.yaml not found in nested Flutter app at: $APP_DIR" >&2
+  exit 2
+fi
+
+cd "$APP_DIR"
+flutter "$@"

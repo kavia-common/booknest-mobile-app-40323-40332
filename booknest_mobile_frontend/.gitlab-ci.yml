@@ -1,0 +1,16 @@
+stages:
+  - analyze
+
+analyze:
+  stage: analyze
+  image: ghcr.io/cirruslabs/flutter:stable
+  variables:
+    GIT_STRATEGY: fetch
+  before_script:
+    - flutter --version
+  script:
+    - cd booknest-mobile-app-40323-40332/booknest_mobile_frontend
+    - flutter pub get
+    - flutter analyze
+  rules:
+    - when: always

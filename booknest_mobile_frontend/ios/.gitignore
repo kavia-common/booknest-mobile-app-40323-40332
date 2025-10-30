@@ -1,0 +1,6 @@
+Pods/
+.build/
+Flutter/Generated.xcconfig
+Flutter/flutter_export_environment.sh
+Runner/GeneratedPluginRegistrant.*
+.symlinks/

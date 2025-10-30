@@ -1,0 +1,2 @@
+workdir=booknest-mobile-app-40323-40332/booknest_mobile_frontend
+run=bash RUN_ANALYZE_ABS.sh

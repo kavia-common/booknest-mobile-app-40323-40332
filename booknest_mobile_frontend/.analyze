@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Simple analyzer shim to be invoked from the Flutter app root.
+set -euo pipefail
+command -v flutter >/dev/null 2>&1 || { echo "[.analyze] FATAL: Flutter SDK not on PATH"; exit 127; }
+flutter pub get
+flutter analyze

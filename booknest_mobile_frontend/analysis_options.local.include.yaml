@@ -1,0 +1,2 @@
+# Local include shim used by analysis_options.yaml if needed.
+include: package:flutter_lints/flutter.yaml

@@ -1,0 +1,2 @@
+This directory is the Flutter app root for BookNest.
+CI can safely run flutter pub get and flutter analyze from here.

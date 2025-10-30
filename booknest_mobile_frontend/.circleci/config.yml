@@ -1,0 +1,22 @@
+version: 2.1
+
+orbs:
+  flutter: cirruslabs/flutter@1
+
+jobs:
+  analyze:
+    docker:
+      - image: ghcr.io/cirruslabs/flutter:stable
+    working_directory: ~/project/booknest-mobile-app-40323-40332/booknest_mobile_frontend
+    steps:
+      - checkout:
+          path: ~/project
+      - run: flutter --version
+      - run: flutter pub get
+      - run: flutter analyze
+
+workflows:
+  version: 2
+  analyze_workflow:
+    jobs:
+      - analyze

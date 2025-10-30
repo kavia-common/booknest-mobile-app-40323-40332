@@ -1,0 +1,7 @@
+.PHONY: analyze nested-analyze
+
+# CI-friendly analyze target that changes into the nested Flutter app root.
+analyze: nested-analyze
+
+nested-analyze:
+	cd booknest-mobile-app-40323-40332/booknest_mobile_frontend && flutter pub get && flutter analyze

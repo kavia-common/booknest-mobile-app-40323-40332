@@ -1,0 +1,5 @@
+The Flutter project root for the BookNest mobile app is this directory.
+
+CI should run:
+- flutter pub get
+- flutter analyze

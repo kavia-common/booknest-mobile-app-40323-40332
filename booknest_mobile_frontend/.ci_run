@@ -1,0 +1,1 @@
+bash RUN_ANALYZE_ABS.sh

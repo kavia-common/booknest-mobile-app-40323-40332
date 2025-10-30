@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Default CI entrypoint for generic runners. Run from repository root.
+set -euo pipefail
+
+APP_DIR="booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+
+echo "[.default-ci] Repo PWD: $(pwd)"
+echo "[.default-ci] Checking app dir: $APP_DIR"
+test -f "$APP_DIR/pubspec.yaml" || { echo "[.default-ci] FATAL: pubspec.yaml missing at $APP_DIR" >&2; exit 2; }
+
+echo "[.default-ci] Flutter on PATH: $(command -v flutter || echo 'not found')"
+command -v flutter >/dev/null 2>&1 && flutter --version || { echo "[.default-ci] ERROR: Flutter SDK not found on PATH"; exit 127; }
+
+echo "[.default-ci] cd $APP_DIR"
+cd "$APP_DIR"
+
+echo "[.default-ci] flutter pub get"
+flutter pub get
+
+echo "[.default-ci] flutter analyze"
+flutter analyze

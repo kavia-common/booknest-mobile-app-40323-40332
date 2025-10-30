@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Canonical CI run-tests entrypoint: ensures Flutter runs within the nested app.
+set -euo pipefail
+
+APP_DIR="booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+if [ ! -d "$APP_DIR" ]; then
+  echo "[.ci/run-tests] ERROR: Flutter app directory not found: $APP_DIR" >&2
+  exit 1
+fi
+
+cd "$APP_DIR"
+flutter pub get
+# Default to analyze; set RUN_TESTS=1 to run tests as well.
+if [[ "${RUN_TESTS:-0}" == "1" ]]; then
+  CI=true flutter test
+else
+  flutter analyze
+fi

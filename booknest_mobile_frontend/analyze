@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Conventional entrypoint: run analyzer for the nested Flutter app.
+set -euo pipefail
+APP_DIR="booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+command -v flutter >/dev/null 2>&1 || { echo "[analyze] FATAL: Flutter not on PATH"; exit 127; }
+[ -f "$APP_DIR/pubspec.yaml" ] || { echo "[analyze] FATAL: pubspec.yaml missing at $APP_DIR"; exit 2; }
+cd "$APP_DIR"
+flutter pub get
+flutter analyze

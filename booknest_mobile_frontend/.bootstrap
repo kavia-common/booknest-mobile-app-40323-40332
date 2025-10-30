@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Universal bootstrap for CI systems: switch to the Flutter project and analyze.
+set -euo pipefail
+
+APP_DIR="booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+
+if [ ! -d "$APP_DIR" ]; then
+  echo "[.bootstrap] ERROR: Flutter app directory not found: $APP_DIR" >&2
+  exit 1
+fi
+
+echo "[.bootstrap] cd $APP_DIR"
+cd "$APP_DIR"
+
+echo "[.bootstrap] flutter pub get"
+flutter pub get
+
+echo "[.bootstrap] flutter analyze"
+flutter analyze

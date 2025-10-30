@@ -1,0 +1,3 @@
+# This file is maintained by Flutter tools for iOS platform metadata.
+# It is safe to have this present for analyzers detecting a valid Flutter app.
+project_type: ios

@@ -1,0 +1,7 @@
+platform :ios, '12.0'
+
+target 'Runner' do
+  # Flutter Pod helper, will be populated by Flutter tools on build if needed.
+  use_frameworks!
+  use_modular_headers!
+end

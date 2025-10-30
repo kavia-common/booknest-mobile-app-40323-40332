@@ -1,0 +1,4 @@
+You are in the Flutter app root.
+Run:
+  flutter pub get
+  flutter analyze

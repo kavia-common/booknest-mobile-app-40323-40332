@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Generic CI lint entrypoint. Runs Flutter analyzer in the nested app.
+set -euo pipefail
+
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+APP_DIR="$REPO_ROOT/booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+
+echo "[lint] cd $APP_DIR"
+cd "$APP_DIR"
+
+echo "[lint] flutter pub get"
+flutter pub get
+
+echo "[lint] flutter analyze"
+flutter analyze

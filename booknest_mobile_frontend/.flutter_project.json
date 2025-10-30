@@ -1,0 +1,4 @@
+{
+  "flutter_project_root": "booknest-mobile-app-40323-40332/booknest_mobile_frontend",
+  "notes": "CI runners should cd to flutter_project_root before running flutter commands."
+}

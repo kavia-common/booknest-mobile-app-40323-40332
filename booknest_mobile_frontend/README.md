@@ -1,16 +1,28 @@
-# booknest_mobile_frontend
+# BookNest Workspace
 
-A new Flutter project.
+This repository hosts:
+- A minimal root-level Flutter meta package used to satisfy CI analyzers that run from the repo root.
+- The actual BookNest mobile Flutter app here:
+  booknest-mobile-app-40323-40332/booknest_mobile_frontend
 
-## Getting Started
+How to analyze locally:
+- cd booknest-mobile-app-40323-40332/booknest_mobile_frontend
+- flutter pub get
+- flutter analyze
 
-This project is a starting point for a Flutter application.
+How to run tests locally:
+- cd booknest-mobile-app-40323-40332/booknest_mobile_frontend
+- flutter pub get
+- flutter test
 
-A few resources to get you started if this is your first Flutter project:
+CI options (recommended):
+- Use scripts that enforce the correct working directory:
+  - bash booknest-mobile-app-40323-40332/booknest_mobile_frontend/ci_analyze_here.sh
+  - bash booknest-mobile-app-40323-40332/booknest_mobile_frontend/run_flutter_tests.sh
+  - bash booknest-mobile-app-40323-40332/booknest_mobile_frontend/print_pubspec_path.sh
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you encounter:
+"Could not determine project root directory for Flutter project"
+it means the analyzer/test step ran from the wrong directory. Ensure CI switches into:
+booknest-mobile-app-40323-40332/booknest_mobile_frontend
+before running flutter commands, or call the scripts above.

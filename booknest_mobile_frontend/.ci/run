@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Minimal CI runner: change into nested Flutter app, run analyzer.
+set -euo pipefail
+cd booknest-mobile-app-40323-40332/booknest_mobile_frontend
+flutter pub get
+flutter analyze

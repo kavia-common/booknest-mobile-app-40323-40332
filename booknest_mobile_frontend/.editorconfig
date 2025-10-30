@@ -1,0 +1,10 @@
+# Some CI wrappers read this to determine project layout; include a workdir hint.
+root = true
+
+[*.{dart,yaml}]
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+
+[workdir]
+path = booknest-mobile-app-40323-40332/booknest_mobile_frontend

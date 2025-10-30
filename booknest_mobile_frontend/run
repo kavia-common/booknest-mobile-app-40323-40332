@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Minimal default entry used by some CI runners.
+set -euo pipefail
+bash RUN_ANALYZE_ABS.sh

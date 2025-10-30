@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Conventional CI analyze entrypoint. Runs from repository root.
+set -euo pipefail
+
+APP_DIR="booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+
+echo "[.init/analyze] cd $APP_DIR"
+cd "$APP_DIR"
+
+echo "[.init/analyze] flutter pub get"
+flutter pub get
+
+echo "[.init/analyze] flutter analyze"
+flutter analyze

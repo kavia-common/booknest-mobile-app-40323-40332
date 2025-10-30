@@ -1,0 +1,4 @@
+# Ignore FVM-managed Flutter SDK cache
+**/bin/cache/
+**/.packages
+**/.dart_tool/

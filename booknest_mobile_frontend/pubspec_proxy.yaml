@@ -1,0 +1,7 @@
+# This is not the actual app pubspec. It exists only to help CI tools
+# discover the nested Flutter project path. Do NOT run flutter commands here.
+#
+# Actual Flutter app root:
+# booknest-mobile-app-40323-40332/booknest_mobile_frontend
+flutter_project_root: booknest-mobile-app-40323-40332/booknest_mobile_frontend
+note: This repository uses a nested Flutter app. Ensure analyzer/build steps cd into the path above.

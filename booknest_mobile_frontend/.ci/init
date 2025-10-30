@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# CI bootstrap: switch to the nested Flutter app and run analyzer.
+set -euo pipefail
+
+APP_DIR="booknest-mobile-app-40323-40332/booknest_mobile_frontend"
+if [ ! -d "$APP_DIR" ]; then
+  echo "[.ci/init] ERROR: Flutter app directory not found: $APP_DIR" >&2
+  exit 1
+fi
+
+echo "[.ci/init] cd $APP_DIR"
+cd "$APP_DIR"
+
+echo "[.ci/init] flutter pub get"
+flutter pub get
+
+echo "[.ci/init] flutter analyze"
+flutter analyze

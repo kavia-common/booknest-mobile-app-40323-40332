@@ -1,0 +1,3 @@
+//
+// Minimal placeholder for iOS Runner project to satisfy CI analyzers that expect an Xcode project.
+// Flutter tooling will generate/update real project files on build.

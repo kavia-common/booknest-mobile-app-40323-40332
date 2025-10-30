@@ -1,0 +1,3 @@
+# Execute these commands from this directory
+flutter pub get
+flutter analyze

@@ -1,0 +1,8 @@
+{
+  "working_directory": "booknest-mobile-app-40323-40332/booknest_mobile_frontend",
+  "commands": [
+    "flutter pub get",
+    "flutter analyze"
+  ],
+  "notes": "Tools should cd to working_directory before executing commands."
+}
