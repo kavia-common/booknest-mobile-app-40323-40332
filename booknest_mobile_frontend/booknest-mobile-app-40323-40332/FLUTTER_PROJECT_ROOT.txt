@@ -1,0 +1,8 @@
+The Flutter project root for the BookNest mobile app is:
+booknest-mobile-app-40323-40332/booknest_mobile_frontend
+
+Automated tools should run from that directory when invoking:
+- flutter pub get
+- flutter analyze
+- flutter test
+- flutter build <platform>
